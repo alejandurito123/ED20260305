@@ -41,7 +41,7 @@ public class TablaMultiplicar {
 		listaTextos.clear();
 		
 		for(int i = 1; i<=10; i++) {
-			String linea = número + "x" + i +"=" + (número * i);
+			String linea = String.format("%d x %d = %d", número, i, número * i);
 			listaTextos.add(linea);
 		}
 	}
@@ -72,12 +72,8 @@ public class TablaMultiplicar {
 	 */
 	@Override
 	public String toString() {
-		String resultado = "";
-		for(String linea : listaTextos) {
-			resultado += linea + "\n";
-		}
 		
-		return resultado;
+		 return String.join("\n", listaTextos) + "\n";
 		
 	}
 
