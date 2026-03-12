@@ -73,7 +73,11 @@ public class TablaMultiplicar {
 	@Override
 	public String toString() {
 		
-		 return String.join("\n", listaTextos) + "\n";
+	    StringBuilder sb = new StringBuilder();
+	    for (String linea : listaTextos) {
+	        sb.append(linea).append("\n");
+	    }
+	    return sb.toString();
 		
 	}
 
